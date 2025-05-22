@@ -1747,6 +1747,18 @@ extern "C" {
 #define SDL_HINT_JOYSTICK_HIDAPI_8BITDO "SDL_JOYSTICK_HIDAPI_8BITDO"
 
 /**
+ * A variable controlling whether the HIDAPI driver for Flydigi controllers
+ * should be used.
+ *
+ * This variable can be set to the following values:
+ *
+ * "0" - HIDAPI driver is not used. "1" - HIDAPI driver is used.
+ *
+ * The default is the value of SDL_HINT_JOYSTICK_HIDAPI
+ */
+#define SDL_HINT_JOYSTICK_HIDAPI_FLYDIGI "SDL_JOYSTICK_HIDAPI_FLYDIGI"
+
+/**
  * A variable controlling whether the HIDAPI driver for Nintendo Switch
  * controllers should be used.
  *
@@ -1948,6 +1960,41 @@ extern "C" {
  * \since This hint is available since SDL 3.2.0.
  */
 #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED "SDL_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED"
+
+/**
+ * A variable controlling whether the new HIDAPI driver for wired Xbox One
+ * (GIP) controllers should be used.
+ *
+ * The variable can be set to the following values:
+ *
+ * - "0": HIDAPI driver is not used.
+ * - "1": HIDAPI driver is used.
+ *
+ * The default is the value of SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE.
+ *
+ * This hint should be set before initializing joysticks and gamepads.
+ *
+ * \since This hint is available since SDL 3.4.0.
+ */
+#define SDL_HINT_JOYSTICK_HIDAPI_GIP "SDL_JOYSTICK_HIDAPI_GIP"
+
+/**
+ * A variable controlling whether the new HIDAPI driver for wired Xbox One
+ * (GIP) controllers should reset the controller if it can't get the metadata
+ * from the controller.
+ *
+ * The variable can be set to the following values:
+ *
+ * - "0": Assume this is a generic controller.
+ * - "1": Reset the controller to get metadata.
+ *
+ * By default the controller is not reset.
+ *
+ * This hint should be set before initializing joysticks and gamepads.
+ *
+ * \since This hint is available since SDL 3.4.0.
+ */
+#define SDL_HINT_JOYSTICK_HIDAPI_GIP_RESET_FOR_METADATA "SDL_JOYSTICK_HIDAPI_GIP_RESET_FOR_METADATA"
 
 /**
  * A variable controlling whether IOKit should be used for controller

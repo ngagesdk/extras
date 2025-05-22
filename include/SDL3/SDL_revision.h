@@ -28,12 +28,12 @@
 #ifndef SDL_revision_h_
 #define SDL_revision_h_
 
-/* #undef SDL_VENDOR_INFO */
+#define SDL_VENDOR_INFO "Github Workflow"
 
 #ifdef SDL_VENDOR_INFO
-#define SDL_REVISION "SDL3-3.3.0-release-3.2.6-491-gbe9d0f2f5 (" SDL_VENDOR_INFO ")"
+#define SDL_REVISION "SDL3-3.3.0-7ae6459 (" SDL_VENDOR_INFO ")"
 #else
-#define SDL_REVISION "SDL3-3.3.0-release-3.2.6-491-gbe9d0f2f5"
+#define SDL_REVISION "SDL3-3.3.0-7ae6459"
 #endif
 
 #endif /* SDL_revision_h_ */
